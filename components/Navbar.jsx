@@ -21,7 +21,7 @@ const Navbar = () => {
   return(
   <nav className='bg-primary-black flex flex-col items-center '>
     <div className='flex justify-center py-4 '>
-      <Image src='/RaiseRocketlogo.png'
+      <img src='/RaiseRocketlogo.png'
       
       className='w-[280.55px] h-[40px]'/>
     </div>
