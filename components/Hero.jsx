@@ -11,10 +11,10 @@ const Hero = () => (
    <p className=" flex justify-left font-kinetica font-bold text-green text-base ">RAISE A ROCKET </p>
    <p className=" flex justify-left font-kinetica font-bold text-green text-base pt-4">WITH US !</p>
    
-   <p className="flex justify-left font-secondary-white text-16 font-kross pt-2">Launch Your Dreams and Change the World </p>
-   <p className="flex justify-left font-secondary-white text-16 font-kross ">with Raise Rocket: The Ultimate Crowdfunding Platform</p>
-   <p className="flex justify-left font-secondary-white text-16 font-kross ">for Social Causes and Startups</p>
-   <p className="flex justify-left font-secondary-white font-kinetica font-bold pt-[6%]">You want to ?</p>
+   <p className="flex justify-left text-secondary-white text-16 font-kross pt-2">Launch Your Dreams and Change the World </p>
+   <p className="flex justify-left text-secondary-white text-16 font-kross ">with Raise Rocket: The Ultimate Crowdfunding Platform</p>
+   <p className="flex justify-left text-secondary-white text-16 font-kross ">for Social Causes and Startups!"</p>
+   <p className="flex justify-left text-secondary-white font-kinetica font-bold pt-[6%]">You want to ?</p>
    <div className="flex justify-left py-4 space-x-6">
    <Link passHref href={'/explore'} 
      ><button className="justify-items-start text-green hover:text-primary-black border
