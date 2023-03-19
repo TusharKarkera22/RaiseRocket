@@ -61,7 +61,7 @@ export default function Dashboard() {
       {/* Card */}
       {campaignsData.map((e) => {
         return (
-          <Card className='w-[30%] h-[430px]' key={e.title}>
+          <Card className='w-[50%] h-[460px]' key={e.title}>
           <CardImg className='w-[300.8px]  h-[262.66px] relative ml-3 mt-1'>
             <Image
               alt="raiserocket dapp"
@@ -84,7 +84,7 @@ export default function Dashboard() {
             <Text><img src="Calendar.png"/></Text>
             <Text className='mt-1.5'>{new Date(e.timeStamp * 1000).toLocaleString()}</Text>
           </CardData>
-          <Link passHref href={'/'+ e.address}><Button className='absolute right-1 translate-y-[-240%] transition-all duration-300 cursor-pointer
+          <Link passHref href={'/'+ e.address}><Button className='absolute right-1  transition-all duration-300 cursor-pointer
         inline-flex items-center  space-x-2 text-green hover:img hover:text-primary-black border text-[10px] text-center 
          border-green hover:bg-green  p-1 text-sm focus:outline-none focus:ring-green-300 font-excratch 
          rounded-lg text-green  dark:border-green dark:text-green dark:hover:text-primary-black dark:hover:bg-green dark:focus:ring-green '>

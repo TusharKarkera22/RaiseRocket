@@ -13,7 +13,7 @@ const FormLeftWrapper = () => {
         </Input>
       </FormInput>
       <FormInput className='flex flex-col mt-5'>
-        <label className='font-kinetica text-[16px] text-green'>Details</label>
+        <label className='font-kinetica text-[16px] text-secondary-white'>Details</label>
         <TextArea className='mt-4 p-[15px] font-kross border-dashed border-2  border-#D9D9D9 rounded' onChange={Handler.FormHandler} value={Handler.form.story} name="story" placeholder='Describe Your Story'>
         </TextArea>
       </FormInput>

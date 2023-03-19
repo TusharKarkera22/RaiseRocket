@@ -60,7 +60,7 @@ const FormRightWrapper = () => {
       <FormInput  className='flex flex-col mt-5 border-dashed'>
         <FormRow>
           <RowFirstInput>
-            <label className='font-kinetica text-[16px]'>Required Amount</label>
+            <label className='font-kinetica text-[16px] text-secondary-white'>Required Amount</label>
             <Input className='mt-3 p-[15px] font-kross border-dashed border-2  border-#D9D9D9 rounded' onChange={Handler.FormHandler} value={Handler.form.requiredAmount} name="requiredAmount" type={'number'} placeholder='Required Amount'></Input>
           </RowFirstInput>
           <RowSecondInput className='mt-6'>
