@@ -1,9 +1,12 @@
+'use client'
+
 import styled from "styled-components";
 import Image from "next/image";
 import {ethers} from 'ethers';
 import CampaignFactory from '../artifacts/contracts/Campaign.sol/CampaignFactory.json'
 import Campaign from '../artifacts/contracts/Campaign.sol/Campaign.json'
 import { useEffect, useState } from "react";
+import { Footer } from "../components";
 
 
 export default function Detail({Data, DonationsData}) {
@@ -73,10 +76,13 @@ export default function Detail({Data, DonationsData}) {
   }
 
   return (
-    <DetailWrapper>
-      <LeftContainer>
+    <>
+    <div className="flex flex-col items-center bg-primary-black pb-6">
+    <DetailWrapper className="flex justify-betweeen w-[1140px] h-[549px]">
+      <LeftContainer className="mt-[4%]">
         <ImageSection>
           <Image
+          className="border-1 border-green rounded"
             alt="raiserocket dapp"
             layout="fill"
             src={
@@ -84,48 +90,51 @@ export default function Detail({Data, DonationsData}) {
             }
           />
         </ImageSection>
-        <Text>
+        <Text className="font-kross text-[14px] text-secondary-white ml-2 border-2 border-dashed rounded border-green ring-offset-green-100/20 mt-[6%]">
           {story}
         </Text>
       </LeftContainer>
-      <RightContainer>
-        <Title>{Data.title}</Title>
-        <DonateSection>
-          <Input value={amount} onChange={(e) => setAmount(e.target.value)} type="number" placeholder="Enter Amount To Donate" />
-          <Donate onClick={DonateFunds}>Donate</Donate>
+      <RightContainer className="mt-4 ml-4 ">
+        <Title className="font-excratch text-[20px] text-secondary-white ">{Data.title}</Title>
+        <DonateSection className="mt-4 flex justify-between items-center mt-[7%]">
+          <Input className=" p-[15px] font-kross border-dashed border-2  border-#D9D9D9 rounded" value={amount} onChange={(e) => setAmount(e.target.value)} type="number" placeholder="Enter Amount To Donate" />
+          <Donate className="w-[180px] h-[40px ] translate-x-[-30%] translate-y-[-10%] flex justify-center align-center transition-all duration-300 cursor-pointer
+        inline-flex items-center  space-x-2 text-green hover:img hover:text-primary-black border
+         border-green hover:bg-green  px-2 py-2.5 text-sm focus:outline-none focus:ring-green-300 font-excratch 
+         rounded-lg text-green  dark:border-green dark:text-green dark:hover:text-primary-black dark:hover:bg-green dark:focus:ring-green" onClick={DonateFunds}>Donate</Donate>
         </DonateSection>
-        <FundsData>
-          <Funds>
-            <FundText>Required Amount</FundText>
-            <FundText>{Data.requiredAmount} Matic</FundText>
+        <FundsData className="flex justify-between mt-[8%] ">
+          <Funds className="align-center">
+            <FundText className="font-kinetica text-[20px] text-secondary-white">Required Amount</FundText>
+            <FundText className="translate-x-[30%] font-kross text-[18px]  ">{Data.requiredAmount} Matic</FundText>
           </Funds>
-          <Funds>
-            <FundText>Received Amount</FundText>
-            <FundText>{Data.receivedAmount} Matic</FundText>
+          <Funds className="align-center ">
+            <FundText className="font-kinetica text-[20px] text-secondary-white ">Received Amount</FundText>
+            <FundText className="translate-x-[30%] font-kross text-[18px]  " >{Data.receivedAmount} Matic</FundText>
           </Funds>
         </FundsData>
-        <Donated>
+        <Donated className="h-[280px] mt-[15px]  border-dashed border-2  border-#D9D9D9 rounded">
           <LiveDonation>
-            <DonationTitle>Recent Donation</DonationTitle>
+            <DonationTitle className="font-excratch text-[12px] text-green align-center border-green border-b-2 p-3 text-center">Recent Donation</DonationTitle>
             {DonationsData.map((e) => {
               return (
                 <Donation key={e.timestamp}>
-                <DonationData>{e.donar.slice(0,6)}...{e.donar.slice(39)}</DonationData>
-                <DonationData>{e.amount} Matic</DonationData>
-                <DonationData>{new Date(e.timestamp * 1000).toLocaleString()}</DonationData>
+                <DonationData className="font-kross text-[12px] text-green">{e.donar.slice(0,6)}...{e.donar.slice(39)}</DonationData>
+                <DonationData className="font-kross text-[12px] text-secondary-white">{e.amount} Matic</DonationData>
+                <DonationData className="font-kross text-[12px] text-secondary-white">{new Date(e.timestamp * 1000).toLocaleString()}</DonationData>
               </Donation>
               )
             })
             }
           </LiveDonation>
           <MyDonation>
-            <DonationTitle>My Past Donation</DonationTitle>
+            <DonationTitle className="font-excratch text-[12px] text-green align-center border-green border-b-2 p-3 text-center">My Past Donation</DonationTitle>
             {mydonations.map((e) => {
               return (
                 <Donation key={e.timestamp}>
-                <DonationData>{e.donar.slice(0,6)}...{e.donar.slice(39)}</DonationData>
-                <DonationData>{e.amount} Matic</DonationData>
-                <DonationData>{new Date(e.timestamp * 1000).toLocaleString()}</DonationData>
+                <DonationData className="font-kross text-[12px] text-green">{e.donar.slice(0,6)}...{e.donar.slice(39)}</DonationData>
+                <DonationData  className="font-kross text-[12px] text-secondary-white">{e.amount} Matic</DonationData>
+                <DonationData className="font-kross text-[12px] text-secondary-white">{new Date(e.timestamp * 1000).toLocaleString()}</DonationData>
               </Donation>
               )
             })
@@ -134,6 +143,9 @@ export default function Detail({Data, DonationsData}) {
         </Donated>
       </RightContainer>
     </DetailWrapper>
+    </div>
+    <Footer/>
+    </>
   );
 }
 
@@ -216,10 +228,13 @@ export async function getStaticProps(context) {
 
 
 const DetailWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  width: 98%;
+background: rgba( 84, 84, 84, 0.4);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4.5px );
+-webkit-backdrop-filter: blur( 4.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
 `;
 const LeftContainer = styled.div`
   width: 45%;
@@ -233,73 +248,31 @@ const ImageSection = styled.div`
   height: 350px;
 `;
 const Text = styled.p`
-  font-family: "Roboto";
-  font-size: large;
-  color: ${(props) => props.theme.color};
-  text-align: justify;
+  
 `;
 const Title = styled.h1`
-  padding: 0;
-  margin: 0;
-  font-family: "Poppins";
-  font-size: x-large;
-  color: ${(props) => props.theme.color};
+  
 `;
 const DonateSection = styled.div`
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 10px;
+  
 `;
 const Input = styled.input`
-  padding: 8px 15px;
-  background-color: ${(props) => props.theme.bgDiv};
-  color: ${(props) => props.theme.color};
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  font-size: large;
-  width: 40%;
-  height: 40px;
+ 
 `;
 const Donate = styled.button`
-  display: flex;
-  justify-content: center;
-  width: 40%;
-  padding: 15px;
-  color: white;
-  background-color: #00b712;
-  background-image: linear-gradient(180deg, #00b712 0%, #5aff15 80%);
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  border-radius: 8px;
-  font-size: large;
+  
 `;
 const FundsData = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
+  
 `;
 const Funds = styled.div`
-  width: 45%;
-  background-color: ${(props) => props.theme.bgDiv};
-  padding: 8px;
-  border-radius: 8px;
-  text-align: center;
+ 
 `;
 const FundText = styled.p`
-  margin: 2px;
-  padding: 0;
-  font-family: "Poppins";
-  font-size: normal;
+  
 `;
 const Donated = styled.div`
-  height: 280px;
-  margin-top: 15px;
-  background-color: ${(props) => props.theme.bgDiv};
+  
 `;
 const LiveDonation = styled.div`
   height: 65%;
@@ -310,24 +283,15 @@ const MyDonation = styled.div`
   overflow-y: auto;
 `;
 const DonationTitle = styled.div`
-  font-family: "Roboto";
-  font-size: x-small;
-  text-transform: uppercase;
-  padding: 4px;
-  text-align: center;
-  background-color: #4cd137;
+ 
 `;
 const Donation = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 4px;
-  background-color: ${(props) => props.theme.bgSubDiv};
+  
   padding: 4px 8px;
 `;
 const DonationData = styled.p`
-  color: ${(props) => props.theme.color};
-  font-family: "Roboto";
-  font-size: large;
-  margin: 0;
-  padding: 0;
+ 
 `;

@@ -6,7 +6,7 @@ import {TailSpin} from 'react-loader-spinner';
 import { ethers } from 'ethers';
 import { toast } from 'react-toastify';
 import CampaignFactory from '../../artifacts/contracts/Campaign.sol/CampaignFactory.json'
-
+import Link from 'next/link';
 const FormState = createContext();
 
 const Form = () => {
@@ -78,19 +78,29 @@ const Form = () => {
 
   return (
       <FormState.Provider value={{form, setForm, image, setImage, ImageHandler, FormHandler, setImageUrl, setStoryUrl, startCampaign, setUploaded}} >
-    <FormWrapper>
-        <FormMain>
+        
+        <p className='font-excratch text-[20px] my-4'>create campaigns</p>
+    <FormWrapper className='flex justify-center w-[1120px] h-[549px]'>
+        <FormMain className=' flex flex-col place-content-center ' >
             {loading == true ?
                 address == "" ?
                     <Spinner>
                         <TailSpin height={60} />
                     </Spinner> :
-                <Address>
-                    <h1>Campagin Started Sucessfully!</h1>
-                    <h1>{address}</h1>
-                    <Button>
+                <Address className='mt-20% justify-center flex flex-col '>
+                    
+                    <h1 className='font-kinetica text-[16px] uppercase place-content-center translate-[10%] '>Campagin Started Sucessfully!</h1>
+
+                    <h1 className=' mt-2 font-kinetica text-[16px] text-green place-content-center ' >{address}</h1>
+                    <Link passHref href={'/explore'}>
+                    <Button className='mt-6 translate-x-[90%] transition-all duration-300 cursor-pointer
+        inline-flex items-center  space-x-2 text-green hover:img hover:text-primary-black border
+         border-green hover:bg-green  px-2 py-2.5 text-sm focus:outline-none focus:ring-green-300 font-excratch 
+         rounded-lg text-green  dark:border-green dark:text-green dark:hover:text-primary-black dark:hover:bg-green dark:focus:ring-green'>
                         Go To Campaign
                     </Button>
+                    </Link>
+                    
                 </Address>
                 :
                     <FormInputsWrapper>
@@ -105,13 +115,17 @@ const Form = () => {
 }
 
 const FormWrapper = styled.div`
-    width: 100%;
-    display:flex;
-    justify-content:center;
+background: rgba( 84, 84, 84, 0.4);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4.5px );
+-webkit-backdrop-filter: blur( 4.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
 `
 
 const FormMain = styled.div`
-    width:80%;
+
+    
 `
 
 const FormInputsWrapper = styled.div`
@@ -128,30 +142,11 @@ const Spinner = styled.div`
     align-items:center ;
 `
 const Address = styled.div`
-    width:100%;
-    height:80vh;
-    display:flex ;
-    display:flex ;
-    flex-direction:column;
-    align-items:center ;
-    background-color:${(props) => props.theme.bgSubDiv} ;
-    border-radius:8px;
+ 
 `
 
 const Button = styled.button`
-    display: flex;
-  justify-content:center;
-  width:30% ;
-  padding:15px ;
-  color:white ;
-  background-color:#00b712 ;
-  background-image:
-      linear-gradient(180deg, #00b712 0%, #5aff15 80%) ;
-  border:none;
-  margin-top:30px ;
-  cursor: pointer;
-  font-weight:bold ;
-  font-size:large ;
+    
 `
 
 export default Form;

@@ -7,14 +7,14 @@ const FormLeftWrapper = () => {
 
   return (
     <FormLeft>
-      <FormInput>
-        <label>Campaign Title</label>
-        <Input onChange={Handler.FormHandler} value={Handler.form.campaignTitle} placeholder='Campaign Title' name='campaignTitle'>
+      <FormInput className=' flex flex-col mt-5 border-dashed'>
+        <label className='font-kinetica text-[16px]'>Title</label>
+        <Input className='font-kross border-dashed border-2  border-#D9D9D9 p-[15px]  mt-4 rounded' onChange={Handler.FormHandler} value={Handler.form.campaignTitle} placeholder='Campaign Title' name='campaignTitle'>
         </Input>
       </FormInput>
-      <FormInput>
-        <label>Story</label>
-        <TextArea onChange={Handler.FormHandler} value={Handler.form.story} name="story" placeholder='Describe Your Story'>
+      <FormInput className='flex flex-col mt-5'>
+        <label className='font-kinetica text-[16px]'>Details</label>
+        <TextArea className='mt-4 p-[15px] font-kross border-dashed border-2  border-#D9D9D9 rounded' onChange={Handler.FormHandler} value={Handler.form.story} name="story" placeholder='Describe Your Story'>
         </TextArea>
       </FormInput>
     </FormLeft>
@@ -26,34 +26,16 @@ const FormLeft = styled.div`
 `
 
 const FormInput = styled.div`
-  display:flex ;
-  flex-direction:column;
-  font-family:'poppins';
-  margin-top:10px ;
+ 
 `
 const Input = styled.input`
-  padding:15px;
-  background-color:${(props) => props.theme.bgDiv} ;
-  color:${(props) => props.theme.color} ;
-  margin-top:4px;
-  border:none ;
-  border-radius:8px ;
-  outline:none;
-  font-size:large;
-  width:100% ;
+ 
 `
 
 const TextArea = styled.textarea`
-  padding:15px;
-  background-color:${(props) => props.theme.bgDiv} ;
-  color:${(props) => props.theme.color} ;
+ 
   margin-top:4px;
-  border:none;
-  border-radius:8px ;
-  outline:none;
-  font-size:large;
-  max-width:100%;
-  min-width:100%;
+  
   overflow-x:hidden;
   min-height:160px ;
 `

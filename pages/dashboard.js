@@ -1,3 +1,4 @@
+'use client'
 import styled from 'styled-components';
 import FilterAltIcon from '@mui/icons-material/FilterAlt';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
@@ -7,6 +8,7 @@ import Image from 'next/image';
 import { ethers } from 'ethers';
 import CampaignFactory from '../artifacts/contracts/Campaign.sol/CampaignFactory.json'
 import { useEffect, useState } from 'react';
+import {Footer} from '../components'
 import Link from 'next/link';
 
 export default function Dashboard() {
@@ -47,38 +49,45 @@ export default function Dashboard() {
   }, [])
 
   return (
-    <HomeWrapper>
+    <>
+    <div className='flex flex-col align-center items-center justify-center bg-primary-black pb-6'>
+    <p className='font-excratch text-[20px] my-4 bg-primary-black'>My DASHBOARD</p>
+    
+    <HomeWrapper  className='bg-primary-black flex flex-col align-center items-center pb-6'>
 
       {/* Cards Container */}
-      <CardsWrapper>
+      <CardsWrapper className='flex flex-wrap w-[80%] mt-[25px] justify-between gap-x-4 gap-y-4 '>
 
       {/* Card */}
       {campaignsData.map((e) => {
         return (
-          <Card key={e.title}>
-          <CardImg>
+          <Card className='w-[30%] h-[430px]' key={e.title}>
+          <CardImg className='w-[300.8px]  h-[262.66px] relative ml-3 mt-1'>
             <Image 
               alt="raiserocket dapp"
               layout='fill' 
               src={"https://raiserocket.infura-ipfs.io/ipfs/" + e.image} 
             />
           </CardImg>
-          <Title>
+          <Title className='font-kinetica text-[12px] uppercase cursor-pointer ml-3 '>
             {e.title}
           </Title>
-          <CardData>
-            <Text>Owner<AccountBoxIcon /></Text> 
-            <Text>{e.owner.slice(0,6)}...{e.owner.slice(39)}</Text>
+          <CardData className='font-kross text-[12px] flex ml-3 space-x-2 mb-3'>
+            <Text className='text-#828282 font-kross '>Owner</Text> 
+            <Text className='text-green font-kross'>{e.owner.slice(0,6)}...{e.owner.slice(39)}</Text>
           </CardData>
-          <CardData>
-            <Text>Amount<PaidIcon /></Text> 
-            <Text>{e.amount} Matic</Text>
+          <CardData className='font-kross text-[12px] flex ml-3 space-x-2 mb-3'>
+            <Text className='font-kross'>Amount</Text> 
+            <Text className='text-green font-kross'>{e.amount} Matic</Text>
           </CardData>
-          <CardData>
-            <Text><EventIcon /></Text>
-            <Text>{new Date(e.timeStamp * 1000).toLocaleString()}</Text>
+          <CardData  className='font-kross text-[12px] flex ml-3 space-x-2'>
+            <Text><img src="Calendar.png"/></Text>
+            <Text className='mt-1.5'>{new Date(e.timeStamp * 1000).toLocaleString()}</Text>
           </CardData>
-          <Link passHref href={'/' + e.address}><Button>
+          <Link passHref href={'/'+ e.address}><Button className='absolute right-1 translate-y-[-240%] transition-all duration-300 cursor-pointer
+        inline-flex items-center  space-x-2 text-green hover:img hover:text-primary-black border text-[10px] text-center 
+         border-green hover:bg-green  p-1 text-sm focus:outline-none focus:ring-green-300 font-excratch 
+         rounded-lg text-green  dark:border-green dark:text-green dark:hover:text-primary-black dark:hover:bg-green dark:focus:ring-green '>
             Go to Campaign
           </Button></Link>
         </Card>
@@ -88,28 +97,27 @@ export default function Dashboard() {
 
       </CardsWrapper>
     </HomeWrapper>
+    </div>
+    <Footer/>
+    </>
   )
 }
 
 
 
 const HomeWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+ 
 `
 const CardsWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 80%;
-  margin-top: 25px;
+  
 `
 const Card = styled.div`
-  width: 30%;
-  margin-top: 20px;
-  background-color: ${(props) => props.theme.bgDiv};
+background: rgba( 84, 84, 84, 0.4);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4.5px );
+-webkit-backdrop-filter: blur( 4.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
   &:hover{
     transform: translateY(-10px);
     transition: transform 0.5s;
@@ -120,48 +128,17 @@ const Card = styled.div`
   }
 `
 const CardImg = styled.div`
-  position: relative;
-  height: 120px;
-  width: 100%;
+  
 `
 const Title = styled.h2`
-  font-family: 'Roboto';
-  font-size: 18px;
-  margin: 2px 0px;
-  background-color: ${(props) => props.theme.bgSubDiv};
-  padding: 5px;
-  cursor: pointer;
-  font-weight: normal;
+ 
 `
 const CardData = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 2px 0px;
-  background-color: ${(props) => props.theme.bgSubDiv};
-  padding: 5px;
-  cursor: pointer;
+  
   `
 const Text = styled.p`
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto';
-  font-size: 18px;
-  font-weight: bold;
+ 
 `
 const Button = styled.button`
-  padding: 8px;
-  text-align: center;
-  width: 100%;
-  background-color:#00b712 ;
-  background-image:
-      linear-gradient(180deg, #00b712 0%, #5aff15 80%); 
-  border: none;
-  cursor: pointer;
-  font-family: 'Roboto';
-  text-transform: uppercase;
-  color: #fff;
-  font-size: 14px;
-  font-weight: bold;
+ 
 `

@@ -1,3 +1,5 @@
+'useclient'
+
 import styled from 'styled-components';
 import { FormState } from '../Form';
 import { useState, useContext } from 'react';
@@ -55,36 +57,46 @@ const FormRightWrapper = () => {
 
   return (
     <FormRight>
-      <FormInput>
+      <FormInput  className='flex flex-col mt-5 border-dashed'>
         <FormRow>
           <RowFirstInput>
-            <label>Required Amount</label>
-            <Input onChange={Handler.FormHandler} value={Handler.form.requiredAmount} name="requiredAmount" type={'number'} placeholder='Required Amount'></Input>
+            <label className='font-kinetica text-[16px]'>Required Amount</label>
+            <Input className='mt-3 p-[15px] font-kross border-dashed border-2  border-#D9D9D9 rounded' onChange={Handler.FormHandler} value={Handler.form.requiredAmount} name="requiredAmount" type={'number'} placeholder='Required Amount'></Input>
           </RowFirstInput>
-          <RowSecondInput>
-            <label>Choose Category</label>
-            <Select onChange={Handler.FormHandler} value={Handler.form.category} name="category">
+          <RowSecondInput className='mt-6'>
+            <label className='font-kinetica text-[16px]'>Choose Category</label>
+            <Select  className='mx-2 space-x-2 p-[15px] font-kross border-dashed border-2  border-#D9D9D9 rounded' onChange={Handler.FormHandler} value={Handler.form.category} name="category">
               <option>Education</option>
               <option>Health</option>
-              <option>Animal</option>
+              <option>Social</option>
+              <option>Startup</option>
+              <option>Personal</option>
+              <option>Creative</option>
+              <option>Others</option>
             </Select>
           </RowSecondInput>
         </FormRow>
       </FormInput>
       {/* Image */}
-      <FormInput>
-        <label>Select Image</label>
-        <Image alt="dapp" onChange={Handler.ImageHandler} type={'file'} accept='image/*'>
+      <FormInput className='mt-3'>
+        <label className='font-kinetica text-[16px]'>Select Image</label>
+        <Image className='mt-3 p-[15px] font-kross border-dashed border-2  border-#D9D9D9 rounded' alt="dapp" onChange={Handler.ImageHandler} type={'file'} accept='image/*'>
         </Image>
       </FormInput>
-      {uploadLoading == true ? <Button><TailSpin color='#fff' height={20} /></Button> :
+      {uploadLoading == true ? <Button><TailSpin color='#D9D9D9' height={20} /></Button> :
         uploaded == false ? 
-        <Button onClick={uploadFiles}>
+        <Button  className='mt-8 translate-x-[30%] items-center transition-all duration-300 cursor-pointer
+        inline-flex items-center  space-x-2 text-green hover:img hover:text-primary-black border
+         border-green hover:bg-green  px-2 py-2.5 text-sm focus:outline-none focus:ring-green-300 font-excratch 
+         rounded-lg text-green  dark:border-green dark:text-green dark:hover:text-primary-black dark:hover:bg-green dark:focus:ring-green' onClick={uploadFiles}>
           Upload Files to IPFS
         </Button>
         : <Button style={{cursor: "no-drop"}}>Files uploaded Sucessfully</Button>
       }
-      <Button onClick={Handler.startCampaign}>
+      <Button className='mt-6 translate-x-[60%]  transition-all duration-300 cursor-pointer
+        inline-flex items-center  space-x-2 text-green hover:img hover:text-primary-black border
+         border-green hover:bg-green  px-2 py-2.5 text-sm focus:outline-none focus:ring-green-300 font-excratch 
+         rounded-lg text-green  dark:border-green dark:text-green dark:hover:text-primary-black dark:hover:bg-green dark:focus:ring-green' onClick={Handler.startCampaign}>
         Start Campaign
       </Button>
     </FormRight>
@@ -96,87 +108,42 @@ const FormRight = styled.div`
 `
 
 const FormInput = styled.div`
-  display:flex ;
-  flex-direction:column;
-  font-family:'poppins';
-  margin-top:10px ;
+  
 `
 
 const FormRow = styled.div`
-  display: flex;
-  justify-content:space-between;
-  width:100% ;
+  
 `
 
 const Input = styled.input`
-  padding:15px;
-  background-color:${(props) => props.theme.bgDiv} ;
-  color:${(props) => props.theme.color} ;
-  margin-top:4px;
-  border:none ;
-  border-radius:8px ;
-  outline:none;
-  font-size:large;
-  width:100% ;
+
 ` 
 
 const RowFirstInput = styled.div`
-  display:flex ;
-  flex-direction:column ;
-  width:45% ;
+ 
 `
 
 const RowSecondInput = styled.div`
-  display:flex ;
-  flex-direction:column ;
-  width:45% ;
+ 
 `
 
 const Select = styled.select`
-  padding:15px;
-  background-color:${(props) => props.theme.bgDiv} ;
-  color:${(props) => props.theme.color} ;
-  margin-top:4px;
-  border:none ;
-  border-radius:8px ;
-  outline:none;
-  font-size:large;
-  width:100% ;
+ 
 `
 
 const Image = styled.input`
-  background-color:${(props) => props.theme.bgDiv} ;
-  color:${(props) => props.theme.color} ;
-  margin-top:4px;
-  border:none ;
-  border-radius:8px ;
-  outline:none;
-  font-size:large;
-  width:100% ;
+  
   &::-webkit-file-upload-button {
     padding: 15px ;
     background-color: ${(props) => props.theme.bgSubDiv} ;
     color: ${(props) => props.theme.color} ;
-    outline:none ;
-    border:none ;
+    
     font-weight:bold ;
   }  
 `
 
 const Button = styled.button`
-  display: flex;
-  justify-content:center;
-  width:100% ;
-  padding:15px ;
-  color:white ;
-  background-color:#00b712 ;
-  background-image:
-      linear-gradient(180deg, #00b712 0%, #5aff15 80%) ;
-  border:none;
-  margin-top:30px ;
-  cursor: pointer;
-  font-weight:bold ;
-  font-size:large ;
+
 `
 
 export default FormRightWrapper

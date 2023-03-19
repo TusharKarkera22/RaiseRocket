@@ -5,6 +5,8 @@ import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import { useState, createContext } from "react";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Footer, Navbar,Hero,About } from '../';
+
 
 const App = createContext();
 
@@ -21,7 +23,7 @@ const Layout = ({ children }) => {
         <ToastContainer />
         <LayoutWrapper>
           <GlobalStyle />
-          <Header />
+          <Navbar/>
           {children}
         </LayoutWrapper>
       </ThemeProvider>

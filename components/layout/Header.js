@@ -1,3 +1,5 @@
+'use client'
+
 import styled from 'styled-components';
 import HeaderLogo from './components/HeaderLogo'
 import HeaderNav from './components/HeaderNav'
