@@ -81,7 +81,7 @@ export default function Dashboard() {
             <Text className='text-green font-kross'>{e.amount} Matic</Text>
           </CardData>
           <CardData  className='font-kross text-[12px] flex ml-3 space-x-2'>
-            <Text><img src="Calendar.png"/></Text>
+            <Text><Image src="Calendar.png"/></Text>
             <Text className='mt-1.5'>{new Date(e.timeStamp * 1000).toLocaleString()}</Text>
           </CardData>
           <Link passHref href={'/'+ e.address}><Button className='absolute right-1 translate-y-[-240%] transition-all duration-300 cursor-pointer

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 
@@ -20,7 +21,7 @@ const Navbar = () => {
   return(
   <nav className='bg-primary-black flex flex-col items-center '>
     <div className='flex justify-center py-4 '>
-      <img src='/RaiseRocketlogo.png'
+      <Image src='/RaiseRocketlogo.png'
       
       className='w-[280.55px] h-[40px]'/>
     </div>

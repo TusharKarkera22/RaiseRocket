@@ -1,12 +1,14 @@
 'use client';
 
+import Link from "next/link";
+
 const Footer = () => (
   <footer className=" bg-green p-6 h-[205px]">
     <div class="md:flex md:justify-between">
         <div class="mb-2 mt-4 md:mb-0">
-            <a href="/" class="flex items-center">
+            <Link href="/" class="flex items-center">
                 <img src="/RaiseRocketDark.png" class="h-8 mr-3" alt="RaiseRocketlogo" />
-            </a>
+            </Link>
             <p className="font-cross text-[12px] text-primary-black pt-[6%] translate-y-10">For any query mail at: raiserocket.query@gmail.com or Call at : 1800 956 6599</p>
             
         </div>
@@ -15,10 +17,10 @@ const Footer = () => (
                 <h2 class="mb-1 text-sm font-excratch text-[14px] text-bold text-primary-black uppercase font-extrabold">About</h2>
                 <ul class="text-primary-black dark:text-primary-black font-kross text-[12px]">
                     <li class="mb-0.5">
-                        <a href="/about_us" class="hover:underline">About Us</a>
+                        <Link href="/about_us" class="hover:underline">About Us</Link>
                     </li>
                     <li>
-                        <a href="/carrers" class="hover:underline">Carrers</a>
+                        <Link href="/carrers" class="hover:underline">Carrers</Link>
                     </li>
                 </ul>
             </div>
@@ -26,13 +28,13 @@ const Footer = () => (
                 <h2 class="mb-1 text-sm font-excratch text-[14px] text-bold text-primary-black uppercase font-extrabold">Support</h2>
                 <ul class="text-primary-black dark:text-primary-black font-kross text-[12px]">
                     <li class="mb-0.5">
-                        <a href="/help-center" class="hover:underline ">Help Center</a>
+                        <Link href="/help-center" class="hover:underline ">Help Center</Link>
                     </li>
                     <li>
-                        <a href="/our-rules" class="hover:underline">Our Rules</a>
+                        <Link href="/our-rules" class="hover:underline">Our Rules</Link>
                     </li>
                     <li>
-                        <a href="/feedback" class="hover:underline">Feedback</a>
+                        <Link href="/feedback" class="hover:underline">Feedback</Link>
                     </li>
                 </ul>
             </div>
@@ -40,10 +42,10 @@ const Footer = () => (
                 <h2 class="mb-1 text-sm font-excratch text-[14px] font-black text-extrabold text-primary-black uppercase font-extrabold">Categories</h2>
                 <ul class="text-primary-black dark:text-primary-black font-kross text-[12px]">
                     <li class="mb-0.5">
-                        <a href="#" class="hover:underline">Social Cause</a>
+                        <Link href="#" class="hover:underline">Social Cause</Link>
                     </li>
                     <li>
-                        <a href="#" class="hover:underline">Startup Ideas </a>
+                        <Link href="#" class="hover:underline">Startup Ideas </Link>
                     </li>
                 </ul>
 
