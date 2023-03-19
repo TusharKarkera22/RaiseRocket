@@ -1,3 +1,11 @@
+##PPT
+PPT
+https://docs.google.com/presentation/d/10rEHd1qQlRZSKmFSHUxEtLvOyvmJMwxf/edit?usp=share_link&ouid=106253845854070702655&rtpof=true&sd=truehttps://docs.google.com/presentation/d/10rEHd1qQlRZSKmFSHUxEtLvOyvmJMwxf/edit?usp=share_link&ouid=106253845854070702655&rtpof=true&sd=true
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -38,5 +46,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-PPT
-https://docs.google.com/presentation/d/10rEHd1qQlRZSKmFSHUxEtLvOyvmJMwxf/edit?usp=share_link&ouid=106253845854070702655&rtpof=true&sd=truehttps://docs.google.com/presentation/d/10rEHd1qQlRZSKmFSHUxEtLvOyvmJMwxf/edit?usp=share_link&ouid=106253845854070702655&rtpof=true&sd=true
