@@ -1,13 +1,14 @@
 'use client';
 
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => (
   <footer className=" bg-green p-6 h-[205px]">
     <div class="md:flex md:justify-between">
         <div class="mb-2 mt-4 md:mb-0">
             <Link href="/" class="flex items-center">
-                <img src="/RaiseRocketDark.png" class="h-8 mr-3" alt="RaiseRocketlogo" />
+                <Image src="/RaiseRocketDark.png" class="h-8 mr-3" alt="RaiseRocketlogo" />
             </Link>
             <p className="font-cross text-[12px] text-primary-black pt-[6%] translate-y-10">For any query mail at: raiserocket.query@gmail.com or Call at : 1800 956 6599</p>
             
@@ -51,7 +52,7 @@ const Footer = () => (
 
             </div>
             <div>
-            <img className=" ml-[160%]  translate-y-16"src="/powered.png"/>
+            <Image className=" ml-[160%]  translate-y-16"src="/powered.png"/>
             </div>
             
 

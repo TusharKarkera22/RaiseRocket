@@ -7,7 +7,7 @@ const Router = useRouter();
 return(
   <section>
    <div className="pt-[8%] pl-[5%]">
-   <img className='flex absolute right-[1%] translate-y-[-23%]' src="./animation gif.gif" alt="animation"/>
+   <Image className='flex absolute right-[1%] translate-y-[-23%]' src="./animation gif.gif" alt="animation"/>
    <p className=" flex justify-left font-kinetica font-bold text-green text-base ">RAISE A ROCKET </p>
    <p className=" flex justify-left font-kinetica font-bold text-green text-base pt-4">WITH US !</p>
    
