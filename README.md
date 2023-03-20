@@ -1,38 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## PPT
 
-## Getting Started
+https://docs.google.com/presentation/d/10rEHd1qQlRZSKmFSHUxEtLvOyvmJMwxf/edit?usp=share_link&ouid=106253845854070702655&rtpof=true&sd=truehttps://docs.google.com/presentation/d/10rEHd1qQlRZSKmFSHUxEtLvOyvmJMwxf/edit?usp=share_link&ouid=106253845854070702655&rtpof=true&sd=true
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Video Demo :
+https://drive.google.com/file/d/1eYCpbN2JpusgaVNpgEyHe1PAlsVgybhr/view?usp=share_link
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Raise Rocket provides a decentralized platform for individuals and organizations to raise funds for their social causes and startup ideas (Crowdfunding website based on polygon chain).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+our blockchain crowdfunding app solves several problems that exist in traditional crowdfunding platforms. Here are some ways in which our app can solve these problems:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1) Security: Traditional crowdfunding platforms are often susceptible to fraud and hacking. However, your blockchain crowdfunding app uses a distributed ledger to store and verify transactions, which makes it more secure and less prone to fraud.
 
-## Learn More
+2) Transparency: Traditional crowdfunding platforms can be opaque, with little transparency into how funds are being used. However, your blockchain crowdfunding app uses smart contracts to automate the crowdfunding process, which ensures that transactions are transparent and executed automatically.
 
-To learn more about Next.js, take a look at the following resources:
+3) Intermediaries: Traditional crowdfunding platforms often rely on intermediaries to execute transactions, which can increase costs and reduce transparency. However, your blockchain crowdfunding app uses smart contracts to automate the crowdfunding process, which eliminates the need for intermediaries and reduces costs.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4) Accessibility: Traditional crowdfunding platforms can be exclusive, with limited access to certain communities or regions. However, your blockchain crowdfunding app is decentralized and accessible to anyone with an internet connection, which makes it more inclusive and accessible.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Overall, our blockchain crowdfunding app solves several problems that exist in traditional crowdfunding platforms by leveraging the power of decentralized technologies. This can help create a more open, transparent, and user-centric platform for crowdfunding, which aligns perfectly with the Web3 vision of creating a more decentralized and democratized internet.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Technologies Used :
+1) Solidity
+2) Next.js
+3) IPFS
+4) Infuria
+5) Hardhat
+6) Tailwind
+7) Vercel
