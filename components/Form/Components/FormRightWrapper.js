@@ -64,7 +64,7 @@ const FormRightWrapper = () => {
             <Input className='mt-3 p-[15px] font-kross border-dashed border-2  border-#D9D9D9 rounded' onChange={Handler.FormHandler} value={Handler.form.requiredAmount} name="requiredAmount" type={'number'} placeholder='Required Amount'></Input>
           </RowFirstInput>
           <RowSecondInput className='mt-6'>
-            <label className='font-kinetica text-[16px] text-seondary-white'>Choose Category</label>
+            <label className='font-kinetica text-[16px] text-secondary-white'>Choose Category</label>
             <Select  className=' my-2 space-x-2 px-[70px] py-[15px] text-secondary-white font-kross border-dashed border-2  border-#D9D9D9 rounded' onChange={Handler.FormHandler} value={Handler.form.category} name="category">
               <option>Education</option>
               <option>Health</option>
@@ -79,7 +79,7 @@ const FormRightWrapper = () => {
       </FormInput>
       {/* Image */}
       <FormInput className='mt-3'>
-        <label className='font-kinetica text-[16px] text-seondary-white'>Select Image</label>
+        <label className='font-kinetica text-[16px] text-secondary-white'>Select Image</label>
         <Image className='mt-3 p-[15px] font-kross border-dashed border-2  border-#D9D9D9 rounded' alt="dapp" onChange={Handler.ImageHandler} type={'file'} accept='image/*'>
         </Image>
       </FormInput>
