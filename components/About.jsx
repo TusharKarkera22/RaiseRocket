@@ -8,7 +8,7 @@ const About = () => (
     <p className="text-center font-excratch font-20 text-secondary-white pt-[10%]">WHAT IS <span className=' text-green font-excratch text-green '>RAISE ROCKET</span> ?</p>
     <hr className="w-[22rem] h-0.5 mt-1 border-0  rounded bg-green"></hr>
     <p className='text-center leading-[17px]  w-[1082px] font-kross text-[14px] text-secondary-white pt-6'>Raise Rocket provides a <span className=' text-green font-kross text-[14px] text-green '>decentralized platform </span>for individuals and organizations <span className='text-green font-kross text-[14px] font-green '>to raise funds for their social causes and startup ideas. </span> 
-        The platform leverages the <span className=' text-green font-kross text-[14px] font-green '> power of web 3 technology to provide secure and transparent transactions.</span> Users can create campaigns on the platform,
+        The platform leverages the <span className=' text-green font-kross text-[14px]  '> power of web 3 technology to provide secure and transparent transactions.</span> Users can create campaigns on the platform,
          set a funding goal, and promote their campaign to a global community of supporters.</p>
     <div className="bg-[url('/Polygon logo.png')]">
 

@@ -80,7 +80,7 @@ const Form = () => {
       <FormState.Provider value={{form, setForm, image, setImage, ImageHandler, FormHandler, setImageUrl, setStoryUrl, startCampaign, setUploaded}} >
         
         <p className='font-excratch text-[20px] text-secondary-white my-4'>create campaigns</p>
-    <FormWrapper className='flex justify-center w-[1120px] h-[549px]'>
+    <FormWrapper className='flex justify-center w-[1120px] h-[600px]'>
         <FormMain className=' flex flex-col place-content-center ' >
             {loading == true ?
                 address == "" ?

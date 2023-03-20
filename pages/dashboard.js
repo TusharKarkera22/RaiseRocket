@@ -50,8 +50,9 @@ export default function Dashboard() {
 
   return (
     <>
+    <div className='flex flex-col h-screen justify-between bg-primary-black'>
     <div className='flex flex-col align-center items-center justify-center bg-primary-black pb-6'>
-    <p className='font-excratch text-[20px] my-4 bg-primary-black'>My DASHBOARD</p>
+    <p className='font-excratch text-[20px] my-4 text-secondary-white bg-primary-black'>My DASHBOARD</p>
     
     <HomeWrapper  className='bg-primary-black flex flex-col align-center items-center pb-6'>
 
@@ -98,7 +99,10 @@ export default function Dashboard() {
       </CardsWrapper>
     </HomeWrapper>
     </div>
-    <Footer/>
+    <footer>
+    <Footer  />
+    </footer>
+    </div>
     </>
   )
 }

@@ -37,7 +37,7 @@ const TextArea = styled.textarea`
   margin-top:4px;
   
   overflow-x:hidden;
-  min-height:160px ;
+  min-height:340px ;
 `
 
 export default FormLeftWrapper;
